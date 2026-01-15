@@ -57,19 +57,7 @@ class _DesktopLayout extends StatelessWidget {
                 child: Lottie.asset(
                   'assets/lottie/lottie_1.json',
                   errorBuilder: (context, error, stackTrace) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[900],
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "Lottie Animation\nassets/lottie/me.json",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white54),
-                        ),
-                      ),
-                    );
+                    return const SizedBox.shrink();
                   },
                 ),
               ),
@@ -111,19 +99,7 @@ class _MobileLayout extends StatelessWidget {
           child: Lottie.asset(
             'assets/lottie/me.json',
             errorBuilder: (context, error, stackTrace) {
-              return Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[900],
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Lottie Animation\nassets/lottie/me.json",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white54),
-                  ),
-                ),
-              );
+              return const SizedBox.shrink();
             },
           ),
         ),
