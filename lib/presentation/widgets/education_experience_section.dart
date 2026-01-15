@@ -148,7 +148,9 @@ class _EducationTimeline extends StatelessWidget {
             child: Center(
               child: Container(
                 width: 1, // Thin line
-                color: Colors.white.withValues(alpha: 0.2),
+                color: Theme.of(
+                  context,
+                ).colorScheme.onSurface.withValues(alpha: 0.2),
               ),
             ),
           ),
@@ -225,7 +227,7 @@ class _HollowDot extends StatelessWidget {
         color: Theme.of(context).scaffoldBackgroundColor,
         shape: BoxShape.circle,
         border: Border.all(
-          color: Colors.white.withValues(alpha: 0.5),
+          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
           width: 2,
         ),
       ),
@@ -244,7 +246,7 @@ class _EducationYearItem extends StatelessWidget {
       style: GoogleFonts.oswald(
         fontSize: 60,
         fontWeight: FontWeight.bold,
-        color: Colors.white.withValues(alpha: 0.05),
+        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05),
       ),
     );
   }
@@ -273,7 +275,7 @@ class _EducationContentItem extends StatelessWidget {
           style: GoogleFonts.oswald(
             fontSize: 24,
             fontWeight: FontWeight.w500,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
         const SizedBox(height: 5),
@@ -283,7 +285,9 @@ class _EducationContentItem extends StatelessWidget {
           style: GoogleFonts.roboto(
             fontSize: 14,
             fontWeight: FontWeight.bold,
-            color: Colors.white70,
+            color: Theme.of(
+              context,
+            ).colorScheme.onSurface.withValues(alpha: 0.7),
           ),
         ),
         const SizedBox(height: 15),
@@ -292,9 +296,11 @@ class _EducationContentItem extends StatelessWidget {
           child: Text(
             data['description']!,
             textAlign: textAlign,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 14,
-              color: Colors.white54,
+              color: Theme.of(
+                context,
+              ).colorScheme.onSurface.withValues(alpha: 0.54),
               height: 1.6,
             ),
           ),
@@ -320,7 +326,9 @@ class _MobileEducationItem extends StatelessWidget {
             style: GoogleFonts.oswald(
               fontSize: 40,
               fontWeight: FontWeight.bold,
-              color: Colors.white.withValues(alpha: 0.1),
+              color: Theme.of(
+                context,
+              ).colorScheme.onSurface.withValues(alpha: 0.1),
             ),
           ),
           const SizedBox(height: 10),
@@ -329,13 +337,15 @@ class _MobileEducationItem extends StatelessWidget {
             style: GoogleFonts.oswald(
               fontSize: 22,
               fontWeight: FontWeight.w500,
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.onSurface,
             ),
           ),
           Text(
             data['subtitle']!,
-            style: const TextStyle(
-              color: Colors.white70,
+            style: TextStyle(
+              color: Theme.of(
+                context,
+              ).colorScheme.onSurface.withValues(alpha: 0.5),
               fontSize: 14,
               fontWeight: FontWeight.bold,
             ),
@@ -343,8 +353,8 @@ class _MobileEducationItem extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             data['description']!,
-            style: const TextStyle(
-              color: Colors.white54,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurface,
               fontSize: 14,
               height: 1.5,
             ),
